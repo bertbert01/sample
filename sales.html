@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Role Selection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      margin-top: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    .button-group {
+      margin: 20px 0;
+    }
+    button {
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #007BFF;
+      color: white;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome!</h1>
+      <h5>select</h5>
+    <div class="button-group">
+      <button onclick="redirectToIndustryPage('consumer')">Consumer</button>
+      <button onclick="redirectToIndustryPage('supplier')">Supplier</button>
+    </div>
+  </div>
+
+  <script>
+    function redirectToIndustryPage(role) {
+      let industryPage = role === 'consumer' ? 'consumer_industry.html' : 'supplier_industry.html';
+      window.location.href = industryPage;
+    }
+  </script>
+</body>
+</html>
