@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consumer Industry</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      margin-top: 50px;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #2c3e50;
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+
+    .dropdown {
+      margin: 20px 0;
+      padding: 12px;
+      font-size: 18px;
+      width: 60%;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      height: 150px;
+    }
+
+    .button-container {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    button {
+      padding: 12px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #3498db;
+      color: white;
+      transition: background-color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .button-icon {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>What Industry Are You Interested In?</h1>
+    <select class="dropdown" id="industry" multiple>
+      <option value="Food & Beverages">Food & Beverages</option>
+      <option value="Fashion & Apparel">Fashion & Apparel</option>
+      <option value="Technology & Gadgets">Technology & Gadgets</option>
+      <option value="Health & Wellness">Health & Wellness</option>
+    </select>
+    <br>
+    <div class="button-container">
+      <button onclick="goBack()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-left button-icon" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M5.707 1.707a1 1 0 0 1 0 1.414L2.414 6H15a1 1 0 0 1 0 2H2.414l3.293 2.879a1 1 0 1 1-1.414 1.414l-4-4a1 1 0 0 1 0-1.414l4-4a1 1 0 0 1 1.414 0z"/>
+        </svg>
+        Back
+      </button>
+
+      <button onclick="submitIndustry()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right button-icon" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M10.293 1.293a1 1 0 0 1 1.414 0l4 4a1 1 0 0 1 0 1.414l-4 4a1 1 0 0 1-1.414-1.414L12.586 7H1a1 1 0 1 1 0-2h11.586l-2.293-2.293a1 1 0 0 1 0-1.414z"/>
+        </svg>
+        Submit
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function goBack() {
+      window.location.href = 'sales.html';  // Redirects to sales.html
+    }
+
+    function submitIndustry() {
+      const industrySelect = document.getElementById('industry');
+      const selectedOptions = Array.from(industrySelect.selectedOptions).map(option => option.value);
+
+      if (selectedOptions.length > 0) {
+        alert('You selected: ' + selectedOptions.join(', '));
+      } else {
+        alert('Please select at least one industry.');
+      }
+    }
+  </script>
+</body>
+
+</html>

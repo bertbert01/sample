@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #acb6e5);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-container {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .login-container h2 {
+      margin-bottom: 20px;
+      color: #2c3e50;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: #2c3e50;
+      font-size: 14px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #3498db;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+      margin-bottom: 15px;
+    }
+
+    .login-btn:hover {
+      background-color: #2980b9;
+    }
+
+    .social-login {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .social-login button {
+      width: 48%;
+      padding: 12px;
+      font-size: 14px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .google-btn {
+      background-color: #db4437;
+    }
+
+    .google-btn:hover {
+      background-color: #c23321;
+    }
+
+    .facebook-btn {
+      background-color: #3b5998;
+    }
+
+    .facebook-btn:hover {
+      background-color: #2d4373;
+    }
+
+    .social-login svg {
+      margin-right: 8px;
+    }
+
+    .register-link {
+      margin-top: 15px;
+      display: block;
+      color: #3498db;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .register-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-container">
+    <h2>Login or Register</h2>
+    <form>
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit" class="login-btn">Login</button>
+    </form>
+
+    <div class="social-login">
+      <button class="google-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 3.48c1.34 0 2.58.46 3.53 1.37l2.63-2.64C12.68.77 10.43 0 8 0A8 8 0 0 0 0 8c0 4.42 3.58 8 8 8 3.92 0 7.19-2.79 7.88-6.48H8V6.4h7.92A7.96 7.96 0 0 0 8 3.48z" />
+        </svg>
+        Google
+      </button>
+      <button class="facebook-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 0a8 8 0 1 0 0 16V9.767H6.577v-2.31H8V6.082c0-1.378.792-2.158 2.007-2.158.58 0 1.189.103 1.189.103v1.304H10.56c-.662 0-.867.414-.867.84v1.066h1.47l-.235 2.31H9.693V16a8 8 0 0 0-1.693-.233V16a8 8 0 1 0 0-16z" />
+        </svg>
+        Facebook
+      </button>
+    </div>
+    <a href="#" class="register-link">Register an account</a>
+  </div>
+</body>
+
+</html>
